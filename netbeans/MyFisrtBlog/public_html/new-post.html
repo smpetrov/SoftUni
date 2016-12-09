@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="styles/style.css" />
+        <link type="text/css" rel="stylesheet" href="styles/form-style.css" />
+        <link type="text/css" rel="stylesheet" href="styles/new-post-style.css" />
+    </head>
+    <body>
+        <div class="wrapper-new-post">    
+            <aside class="sidebar">
+                <div class="logo">
+                    <img src="resources/images/logo_sidebar.png" alt="logo"/>
+                </div>                
+                <hr>
+                <nav>
+                    <ul>
+                        <li class="single-menu-element">
+                            <a href="index.html" class="single-menu-element-link">Home</a>
+                        </li>
+                        <li class="single-menu-element">
+                            <a href="new-post.html" class="single-menu-element-link">Create Post</a>
+                        </li>
+                        <li class="single-menu-element">
+                            <a href="index.html" class="single-menu-element-link">Logout</a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <h2 class="recent-posts-title">Recent Posts</h2>
+                    <hr>
+                    <ul>
+                        <li class="single-recent-post">
+                            <a href="#" class="single-menu-element-link">Example1</a>
+                        </li>
+                        <li class="single-recent-post">
+                            <a href="#" class="single-menu-element-link">Example2</a>
+                        </li>
+                        <li class="single-recent-post">
+                            <a href="#" class="single-menu-element-link">Example3</a>
+                        </li>
+                        <li class="single-recent-post">
+                            <a href="#" class="single-menu-element-link">Example4</a>
+                        </li>
+                        <li class="single-recent-post">
+                            <a href="#" class="single-menu-element-link">Example5</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <main>
+                <header class="new-post-title">
+                    <h2 id="editor-title">Create new post</h2>
+                </header>
+                <div class="user-new-postr-block">
+                    <form id="post-form">
+                        <ul class="title-author">
+                            <li class="single-element-form">
+                                <h1 class="title-form">Blog Post Title:</h1>
+                                <input type="text" value="" placeholder="Title" id="title"/>
+                            </li>                            
+                            <li class="single-element-form">
+                                <h1 class="title-form">Author</h1>
+                                <input type="text" value="" placeholder="Author" id="author"/>
+                            </li>                            
+                        </ul>
+                    </form>
+                    <h1 class="title-from">Content:</h1>
+                    <textarea class="content-field" placeholder="Content" id="content">
+                    </textarea>
+                    <br>
+                    <button id="create-request-new-post">Publish</button>
+                </div>
+                <footer>
+                    <p class="footer-text">&copy; Smphouse. Free</p>
+                </footer>
+            </main>
+        </div>
+    </body>
+</html>
