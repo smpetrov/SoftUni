@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
 #menu{
     display: inline;
     list-style: none;
@@ -17,7 +19,8 @@
 }
 .author-style{
     color:rgba(29,188,11,0.89);
-    font-family: "Oswald";
+    font: 54px Oswald;
+    font-weight: 600;
 }
 
 .description-style{
