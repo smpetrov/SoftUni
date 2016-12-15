@@ -1,0 +1,25 @@
+#menu{
+    display: inline;
+    list-style: none;
+}
+
+#menu li{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#booksList ul{
+    margin-bottom: 15px;
+}
+
+.title-style{
+    
+}
+.author-style{
+    color:rgba(29,188,11,0.89);
+    font-family: "Oswald";
+}
+
+.description-style{
+    text-decoration: underline;
+}
