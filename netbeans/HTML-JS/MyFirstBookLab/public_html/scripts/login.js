@@ -1,3 +1,4 @@
+//kinvey - smphouse@yahoo.com - SMPMIMISP
 function login(){
     let username = $('#username').val();
     let password = $('#pass').val();

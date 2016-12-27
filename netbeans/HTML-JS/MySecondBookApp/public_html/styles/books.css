@@ -1,0 +1,63 @@
+header{
+    background: #DDD;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 3px;
+}
+
+header a:hover{
+    background: #AAA;
+}
+
+#loadingBox, #infoBox, #errorBox {
+    display: none;
+    background: #AAA;
+    padding: 5px 10px;
+    border-radius: 3px;
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+main > section{
+    display: none;
+}
+
+table th {
+    background: #AAA;
+    font-size: 1.2em;
+    padding: 10px 10px;
+}
+
+table th, table td {
+    background: #DDD;
+    padding: 5px 10px;
+}
+
+#loadingBox{
+    background: #7CB3E9;
+}
+
+#infoBox{
+    background: #393;
+}
+
+#errorBox{
+    background: #F50;
+    color: white;
+}
+
+footer{
+    background: #DDD;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 0.8em;
+    margin: 10px 0;
+}
