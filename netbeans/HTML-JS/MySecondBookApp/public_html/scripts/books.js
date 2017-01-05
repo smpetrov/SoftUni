@@ -100,6 +100,50 @@ function register() {
     }
 }
 
+function makeComment(){
+    let currentElement = document.activeElement;
+    currentElement.style.display = 'none';
+    currentElement.nextElementSibling.style.display='inline-block';
+}    
+
+function writeComment(){
+     let parentElement = document.activeElement.parentNode.parentNode;
+     let elements = parentElement.childNodes;
+     let commentT = elements[0];
+     let authorT = elements[1];
+     
+     
+     console.log(commentT.childNodes[1].value);
+     console.log(authorT.childNodes[1].value);
+     
+//    let booksUrl = kinveyServiceBaseUrl + "appdata/" + kinveyAppID + "/books";
+//    if (!book.comments){
+//        book.comments =[];
+//    }
+//    book.comments.push({author: "ssssss" , commentText: "sssssssddfddd"});
+//    
+//    //тук може и без JSON
+//    $.ajax({
+//            method: "POST",
+//            url: booksUrl,
+//            data:JSON.stringify(book),
+//            headers: {"Authorization": "Kinvey "+sessionStorage.authToken,
+//                "Content-Type":"application/json"},
+//            success: doComment,
+//            error: showAjaxError
+//        });
+//    function doComment(data){
+//        showListBooksView();
+//        showInfo("Write OK !");
+//    }    
+}
+
+function cancelComment(){
+    let parentElement = document.activeElement.parentNode.parentNode;
+    parentElement.style.display = 'none';
+    parentElement.previousElementSibling.style.display='inline-block';
+}
+
 function showListBooksView() {
     showView('viewListBooks');
     $("#books").text('Loading ...');
@@ -112,6 +156,7 @@ function showListBooksView() {
             success: booksLoaded,
             error: showAjaxError
         });
+
     function booksLoaded(books , status){
         showInfo("Books loaded !");
         $("#books").text(' ');
@@ -125,12 +170,41 @@ function showListBooksView() {
             booksTable.append($("<tr>")
                     .append($('<td></td>').text(book.title))
                     .append($('<td></td>').text(book.author))
-                    .append($('<td></th>').text(book.description))
+                    .append($('<td></td>').text(book.description))
             );
+            booksTable.append($("<tr>")
+                      .append($('<td colspan="3">')));
             
+            if (book.comments){
+                if(book.comments.length > 0){
+                    for (let comment of book.comments){
+                       booksTable.append($('<div></div>').text(comment.commentText))
+                                 .append($('<div class="authorComment"></div>').text("-- "+comment.author)
+                        );
+                    }
+                }
+            }   
+                       
+            booksTable.append($('<div>')
+                      .append($('<a href="#" class="linkAddComment" onclick="makeComment();"></a>').text("Add comment"))  
+                      .append($('<from class="addComment">')
+                      .append($('<div class="elementComment">Comment <input type="text" id="commentTitle" required /></div>'))
+                      .append($('<div class="elementComment">Author <input type="text" id="authorTitle" required /></div>'))
+                      .append($('<div class="elementComment"><input type="submit" onclick="writeComment();" value="Add comment" /></div>'))
+                      .append($('<div class="elementComment"><input type="submit" onclick="cancelComment();" value="Cancel" /></div>'))
+                      )
+                      .append($('</form>'))
+                      )
+                      .append($('</div>'));
+            
+            booksTable.append($('</td></tr>'));
+    
+            booksTable.append($("</tr>"));
         }
         $("#books").append(booksTable);
+        $(".addComment").hide();
     }    
+    
 }
 
 function showCreateBookView() {
@@ -165,6 +239,7 @@ function logout() {
     showHomeView();
     showHideNavigationLinks();
 }
+
 //$(нещо) - изпълнява се след като се зареди цялото dom дърво
 $(function(){
     $("#linkHome").click(showHomeView);
