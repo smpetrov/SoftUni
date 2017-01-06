@@ -107,35 +107,39 @@ function makeComment(){
 }    
 
 function writeComment(){
-     let parentElement = document.activeElement.parentNode.parentNode;
-     let elements = parentElement.childNodes;
-     let commentT = elements[0];
-     let authorT = elements[1];
+     let parentSubmitElement = document.activeElement.parentNode.parentNode;
      
+     let elements = parentSubmitElement.childNodes;
+     let commentT = elements[0].childNodes[1].value;
+     let authorT = elements[1].childNodes[1].value;
+//     console.log(elements[4].childNodes[0].value);
+     let bookT = JSON.parse(elements[4].childNodes[0].value);
+    
+     if (!bookT.comments){
+         bookT.comments = [];
+     }
+    
+     bookT.comments.push({author: authorT , commentText: commentT });
+//     console.log(commentT);
+//     console.log(authorT);
+//     console.log(bookT._id);
      
-     console.log(commentT.childNodes[1].value);
-     console.log(authorT.childNodes[1].value);
-     
-//    let booksUrl = kinveyServiceBaseUrl + "appdata/" + kinveyAppID + "/books";
-//    if (!book.comments){
-//        book.comments =[];
-//    }
-//    book.comments.push({author: "ssssss" , commentText: "sssssssddfddd"});
-//    
-//    //тук може и без JSON
-//    $.ajax({
-//            method: "POST",
-//            url: booksUrl,
-//            data:JSON.stringify(book),
-//            headers: {"Authorization": "Kinvey "+sessionStorage.authToken,
-//                "Content-Type":"application/json"},
-//            success: doComment,
-//            error: showAjaxError
-//        });
-//    function doComment(data){
-//        showListBooksView();
-//        showInfo("Write OK !");
-//    }    
+    let booksUrl = kinveyServiceBaseUrl + "appdata/" + kinveyAppID + "/books";
+    
+    //тук може и без JSON
+    $.ajax({
+            method: "PUT",
+            url: booksUrl+"/"+bookT._id,
+            data:JSON.stringify(bookT),
+            headers: {"Authorization": "Kinvey "+sessionStorage.authToken,
+                "Content-Type":"application/json"},
+            success: doComment,
+            error: showAjaxError
+        });
+    function doComment(data){
+        showListBooksView();
+        showInfo("Write OK !");
+    }    
 }
 
 function cancelComment(){
@@ -167,6 +171,7 @@ function showListBooksView() {
                 .append($('<th>Description</th>'))
         );
         for (let book of books) {
+            let bookJSONString = JSON.stringify(book);
             booksTable.append($("<tr>")
                     .append($('<td></td>').text(book.title))
                     .append($('<td></td>').text(book.author))
@@ -192,6 +197,7 @@ function showListBooksView() {
                       .append($('<div class="elementComment">Author <input type="text" id="authorTitle" required /></div>'))
                       .append($('<div class="elementComment"><input type="submit" onclick="writeComment();" value="Add comment" /></div>'))
                       .append($('<div class="elementComment"><input type="submit" onclick="cancelComment();" value="Cancel" /></div>'))
+                      .append($("<div class='elementComment'><input type='hidden' value='"+bookJSONString+"' /></div>"))
                       )
                       .append($('</form>'))
                       )
