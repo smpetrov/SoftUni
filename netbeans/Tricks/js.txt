@@ -1,0 +1,52 @@
+https://softuni.bg/trainings/resources/video/9276/video-screen-23-june-2016-svetlin-nakov-book-library-software-technologies-june-2016
+
+1. jquery да се зарежда преди дрегите скриптове.
+
+2. За да сме сигурни, че JS ще се изпълни след като се зареди цялото DOM дърво то
+създаваме анонимно функция и в нея закачаме event handlers.
+$(function (){
+	//тук пишем event handlers пр. закачане към click event-a на бутон Home функцията showHomeView
+	$("#linkHome").click(showHomeView);
+	
+	showHomeView();
+	showHideNavigationLinks();
+})
+т.е. JS се парсва след като се зареди цалото DOM дърво.
+3. Концепсия за приложение чрез скриване на част от HTML кода.
+function showView(viewId){
+    $("main > section").hide();
+    $("#"+viewId).show();
+}
+function showHideNavigationLinks(){
+    let loggedIn = sessionStorage.authToken != null;
+    if (loggedIn) {
+        $("#linkLogin").hide();
+        $("#linkListBooks").show();
+    } else {
+        $("#linkLogin").show();
+        $("#linkListBooks").hide();
+    }
+}
+function showHomeView() {
+    showView('home');
+}
+Идеята е че показваме от index.html страницата само това, което трябва.
+В index.html е всичкия HTML код.
+showView - определя какво да се показва от main секцията в зависимост от подадения индентификатор а  
+showHideNavigationLinks - определя какво да се показва от меню бара в зависимост от това дали сме логнати.
+
+4. Как се закача jquery към HTML 
+пр. function test(){
+	$('#etiket').hide();
+}
+$ - това е DOM дървото в jquery.
+
+5. Безплатни templates - oswd.org
+Платени templatee - envato.market.com
+
+6.moment.js - взима локолното време и то предсталя в формата , който определим
+7.mostache.js - вмъква templates от HTML
+8.sammy.js - редиректва към други страници
+9. Концепция със импортване на templates
+Имаме app.js в него инстанцираме view-тата и controller -те . 
+После controllers викат свой методи с които викат методи на view-тата

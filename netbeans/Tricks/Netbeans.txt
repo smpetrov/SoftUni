@@ -1,0 +1,15 @@
+ Changing the font size
+
+Some users may have different needs and want the font size to be bigger. NetBeans IDE has the facility to change the default font size through the configurations settings just like Look and feel setting.
+
+In the netbeans.conf configuration file for NetBeans IDE which can be found in
+
+ C:\Program Files\NetBeans 6.1\etc\netbeans.conf
+
+for the default Windows XP NetBeans IDE installation we can add the fontsize option to the netbeans_default_options string value
+
+ --fontsize 18
+
+so make the configuration look like
+
+netbeans_default_options="<old-options> --fontsize 18"
