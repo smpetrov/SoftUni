@@ -17,13 +17,13 @@
     let mainContentSelector = ".main-content";
     
     let homeView = new HomeView(mainContentSelector, selector);
-    let homeController = HomeController(homeView);
+    let homeController = new HomeController(homeView, requester, baseUrl, appKey);
     
     let userView = new UserView(mainContentSelector, selector);
-    let userController = UserController(userView);
+    let userController = new UserController(userView, requester, baseUrl, appKey);
     
     let postView = new PostView(mainContentSelector, selector);
-    let postController = PostController(postView);
+    let postController = new PostController(postView, requester, baseUrl, appKey);
 
     // Create HomeView, HomeController, UserView, UserController, PostView and PostController
 
@@ -49,7 +49,7 @@
 
     onRoute("#/register", function () {
         // Show the register page...
-        userController.showRegistarPage(authService.isLoggedIn());
+        userController.showRegiterPage(authService.isLoggedIn());
     });
 
     onRoute("#/logout", function () {

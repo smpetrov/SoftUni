@@ -6,21 +6,21 @@ class UserController {
         this._baseServiceUrl = baseUrl + "/user/" + appKey + "/"; 
     }
     
-    showLoginPage(){
-        this._userView.showLoginPage();
+    showLoginPage(isLoggedIn){
+        this._userView.showLoginPage(isLoggedIn);
     }
     
-    showRegiterPage(){
-        this._userView.showRegisterPage();
+    showRegiterPage(isLoggedIn){
+        this._userView.showRegisterPage(isLoggedIn);
     }
     
     register(data){
-        if (data.username.lenght <6){
+        if (data.username.length <3){
             showPopup('error', 'Smaller username');
             return;
         }
         
-        if (data.fullNmae.length < 8){
+        if (data.fullname.length < 3){
             showPopup('error','Fullname is smaller');
             return;
         }
@@ -48,7 +48,22 @@ class UserController {
     }
     
     login(data){
-        
+        let requestUrl = this._baseServiceUrl + "login";
+        this._requester.post(requestUrl, data, 
+            function successCallback(response){
+                //запазваме user-a  в sessionStorage за да може 
+                //getCurrentUser да го чете от там
+                sessionStorage.setItem('username' , response.username);
+                sessionStorage.setItem('_authToken' , response._kmd.authtoken);
+                sessionStorage.setItem('fullName' , response.fullname);
+                
+                showPopup('success' , 'Login success');
+                redirectUrl('#/');
+            },
+            function errorCallback(response){
+                showPopup('error' , 'Not login');
+            }
+        );
     }
     
     logout(){
