@@ -40,6 +40,9 @@
 
     onRoute("#/post-:id", function () {
         // Create a redirect to one of the recent posts...
+        //преместваме избания post в началото на страницата
+        let top = $('#post-' + this.params['id']).position().top;
+        $(window).scrollTop(top);
     });
 
     onRoute("#/login", function () {

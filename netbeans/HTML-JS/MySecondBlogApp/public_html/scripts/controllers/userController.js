@@ -68,6 +68,6 @@ class UserController {
     
     logout(){
         sessionStorage.clear();
-        redirectUrl('#/ ');
+        redirectUrl('#/');
     }
 }
