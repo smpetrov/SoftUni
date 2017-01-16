@@ -10,3 +10,8 @@ http://articlebin.michaelmilette.com/making-xdebug-work-with-netbeans-on-windows
 6. php-fig.org - тук стандарта за стила за писан на php
 7. Ескейпинга не работи в апострофи/''/ а само при кавички/""/.
 8. php - camelcase за функциите
+9. при MVC - всички заявки минават през front/root/ controller. Той определя към кой контролер да отиде
+заявката, а този контролер определя кое действие да се извърши.
+Пр. http://localhost/blog/posts/7 - ще рече - отиди в index.php(fron controller) - от там в
+postsController и изпълни действието view на 7 post
+10. === и !== проверява и типа освен стойностите
