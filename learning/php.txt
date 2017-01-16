@@ -1,0 +1,12 @@
+1.flexgrid - за създаване на responsive design
+2. https://xdebug.org/wizard.php - постъпково инсталоране на xdebug
+3. xdebug and netbeans
+https://netbeans.org/kb/docs/php/debugging.html
+http://articlebin.michaelmilette.com/making-xdebug-work-with-netbeans-on-windows/
+4. В php няма DOM дърво . Тук нещата се случват на сървъра и се връща HTML страница. Докато при JS 
+има DOM дърво и JS модифицира DOM дървото и всичко се случва в броузера. При JS при F12 виждаме сорс кода то
+при PHP сорс кода е на сървъра и ние не може да го видим.
+5. <?= е еквивалентно на <?php echo
+6. php-fig.org - тук стандарта за стила за писан на php
+7. Ескейпинга не работи в апострофи/''/ а само при кавички/""/.
+8. php - camelcase за функциите
