@@ -1,0 +1,2 @@
+1. Заявката към базата през ORM при Entity Framework се прови рли извичване на toList или foreach.
+2. epress profiler - за подслушване на комуникацията с базата

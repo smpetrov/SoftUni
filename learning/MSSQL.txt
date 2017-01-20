@@ -1,0 +1,5 @@
+1. ID с големи букви а за колоните PascalCase
+2. nvarchar - т.е. unicode текст
+3. varbinary - последователност от байтове
+4. nvarchar(MAX) - ако е малко се държи като nvarchar ако е голямо
+   се държи като ntext но е бързо като nvarchar

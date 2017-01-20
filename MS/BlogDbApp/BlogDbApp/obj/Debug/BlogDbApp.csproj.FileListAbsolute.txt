@@ -1,0 +1,10 @@
+E:\git_repo_softuni\SoftUni\MS\BlogDbApp\BlogDbApp\bin\Debug\BlogDbApp.exe.config
+E:\git_repo_softuni\SoftUni\MS\BlogDbApp\BlogDbApp\bin\Debug\BlogDbApp.exe
+E:\git_repo_softuni\SoftUni\MS\BlogDbApp\BlogDbApp\bin\Debug\BlogDbApp.pdb
+E:\git_repo_softuni\SoftUni\MS\BlogDbApp\BlogDbApp\bin\Debug\EntityFramework.dll
+E:\git_repo_softuni\SoftUni\MS\BlogDbApp\BlogDbApp\bin\Debug\EntityFramework.SqlServer.dll
+E:\git_repo_softuni\SoftUni\MS\BlogDbApp\BlogDbApp\bin\Debug\EntityFramework.xml
+E:\git_repo_softuni\SoftUni\MS\BlogDbApp\BlogDbApp\bin\Debug\EntityFramework.SqlServer.xml
+E:\git_repo_softuni\SoftUni\MS\BlogDbApp\BlogDbApp\obj\Debug\BlogDbApp.csprojResolveAssemblyReference.cache
+E:\git_repo_softuni\SoftUni\MS\BlogDbApp\BlogDbApp\obj\Debug\BlogDbApp.exe
+E:\git_repo_softuni\SoftUni\MS\BlogDbApp\BlogDbApp\obj\Debug\BlogDbApp.pdb
