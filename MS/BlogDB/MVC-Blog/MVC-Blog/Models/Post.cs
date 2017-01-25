@@ -17,16 +17,19 @@ namespace MVC_Blog.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(200)]
+        [StringLength(250)]
         public String Title { get; set; }
 
         [Required]
+        [DataType(DataType.MultilineText)]
         public String Body { get; set; }
 
         [Required]
         public DateTime Date { get; set; }
 
         public ApplicationUser Author { get; set; }
+
+        public ICollection<Comment> Comments { get; set; }
 
     }
 }

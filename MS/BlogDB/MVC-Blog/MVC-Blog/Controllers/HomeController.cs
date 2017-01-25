@@ -16,5 +16,22 @@ namespace MVC_Blog.Controllers
             var post = db.Posts.OrderByDescending(p => p.Date).Take(3);
             return View(post.ToList());
         }
+
+
+
+
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
     }
 }
