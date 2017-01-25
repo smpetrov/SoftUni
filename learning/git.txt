@@ -1,0 +1,87 @@
+1.https://git-scm.com/     or 
+https://msysgit.github.io  - dwoanload git client 
+
+2.Клониране на remote репозитори на диска.
+  В папката, където ще бъде локалното репозитори ->
+  десен клавиш -> Git Bash Here -> git clone <url repository>
+
+3.Сваляне на последните промени от remote репозитори.
+  Отиваме в папаката където е .git файла ->
+  десен клавиш -> Git Bash Here -> git pull
+
+4.Определяне, кои файлове ще се commit-нат 
+  Отиваме в папката където е файла ->
+  десен клавиш -> Git Bash Here -> git add <file name or . for all>
+
+5.Upload на local репозиторито.
+  Отиваме в папаката където е .git файла ->
+  десен клавиш -> Git Bash Here -> git commit - m "пояснителен текс за промените"  
+
+6.Проверка на статуса на local репозиторито /показва локалните промени/
+  git status
+
+7.Създаване на локално репозитори в локалната папка.
+  git init - т.е. създава файла .git в локалната директория
+
+8.Съдаване на short name за remote репорзитори.
+  git remote add [remote url] [remote name]
+
+9.5.Upload на remote репозиторито.
+  Отиваме в папаката където е .git файла ->
+  десен клавиш -> Git Bash Here -> git push [remote name] [local name]  
+
+10.Задаване на user name and user e-mail.
+   git config --global user.name <your name>
+   git config --global user.email <your email>
+
+11. cd -преместване по директориите
+    pwd - показва в коя директория сте
+
+12. Начин на работа:
+	- 1.git pull - сваляте промените от remote репозиторито на диска
+	- 2.правите промени
+	- 3.git add . - определяте файловете за commit
+	- 4.git commit -m "message" - качвате в локалното репозитори
+	- 5.повтаряте стъпки от 2 до 4 докато имате стабилно работещ код
+	- 6.git push - качвате в remote репозиторито
+	- 7.при конфликт - git pull
+	- 8.разрешаване на конфликтите
+	- 9.git add .
+	- 10.git commit -m "message"
+	- 11.git push
+
+13. Поле gitignore - не качва в git ненужните файлове за дадена технология
+
+14. Създаване на branch
+	- git branch <name>
+	- git checkout <name>
+	- git push origin <name>
+	- git push --set-upstream origin <name>
+	
+15. Определяне файловете за commit и commit едновревенно
+    git commit -a -m "message"
+
+16. Merge на два branches
+		- 1. git checkout <name of master branch>
+		- 2. git merge <name of branch>
+		- 3. git push origin <name of master branch>
+17. Изтриване на локалния branch
+    git branch -d <name of branch>		
+
+18. Изтриване на remote branch
+    git push origin --delete <name of branch>		
+	
+19. Origin значи, че работим remotely	
+
+20. Изтриване на repository от github през сайта:
+	-1.Избери репозиторито
+	-2.Избери setting от toolbar-a
+	-3.Скролирай надолу до delete секцията
+
+21. Връщане към предишна версия
+	- git log
+	- git reset --hard <ългия номер от log>   -- премахва следващите след този commt данни
+		или
+	  git reset --soft <ългия номер от log>   -- запазва следващите след този commt данни
+	
+	

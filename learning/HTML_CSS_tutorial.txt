@@ -1,0 +1,28 @@
+1. Работа с HTML/CSS в eclipse:
+	-1.променяме переспективата на Web
+	-2.в project explorer десен клавиш -> new project ->Web -> Static Web Project
+	-3.в поле project name пишем имато на проекта
+	-4.в поле Target runtime ->New Runtime 
+	-5.Basic -> HTTP Preview
+	-6.Отбелязваме Create a new local server ->Finish
+	-7.Десен клавиш - > new -> HTML file ->Finish
+	-8.В поле file name въвеждаме името на файла ->Finish
+	-9.Избираме New HTML File (5) ->Finish
+	-10.Десен клавиш върху HTNL файла -> Run as -> Run on server
+	-11.Finish
+
+2.Промяна на подразбиращия се броузер
+	-1.Windows -> Preferences -> General -> Web Browser -> избираме броузера, където
+	ще се рендират страниците.
+	
+3.За шрифтове ползвайте pt а не px /т.к. пр. при Apple 1 pt = на много пиксели/
+
+4.В css 
+	- class/./ за нещата, които се повтарят
+	- id/#/ за уникалните неща
+	
+5.В css 
+	- пр. #name > span{} - директно наследник
+	- пр. #name span{} - всеки наследник
+
+6.При float когато имаме блокови елементи едни до друг то те вече не са блокови.	

@@ -1,0 +1,17 @@
+1.psvm -> създава main метод
+
+2.sout + tab -> system.out.println
+
+3.alt+enter -> предлага действие /пр. import/
+
+4.ctrl + a -> select all
+
+5.Създаване на shortcut - I вариант:
+	- маркираме кода за който искаме shortcut-a
+	- Tools->Save as live template
+	- в поле abreviation пишем shortcut-a 
+
+6.Създаване на shortcut - II вариант:
+	- File->Setings->Editor->Live templates
+
+7.

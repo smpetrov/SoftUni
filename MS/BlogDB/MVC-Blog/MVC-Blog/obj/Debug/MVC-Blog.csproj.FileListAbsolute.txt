@@ -99,3 +99,4 @@ E:\git_repo_softuni\SoftUni\MS\BlogDB\MVC-Blog\MVC-Blog\bin\System.Web.Routing.d
 E:\git_repo_softuni\SoftUni\MS\BlogDB\MVC-Blog\MVC-Blog\bin\System.Web.Services.dll
 E:\git_repo_softuni\SoftUni\MS\BlogDB\MVC-Blog\MVC-Blog\bin\System.Xml.dll
 E:\git_repo_softuni\SoftUni\MS\BlogDB\MVC-Blog\MVC-Blog\bin\System.Xml.Linq.dll
+E:\git_repo_softuni\SoftUni\MS\BlogDB\MVC-Blog\MVC-Blog\obj\Debug\MVC-Blog.csprojResolveAssemblyReference.cache

@@ -28,6 +28,7 @@ namespace MVC_Blog.Migrations
 
         }
 
+        /*
         protected override void Seed(ApplicationDbContext context)
 
         {
@@ -38,7 +39,7 @@ namespace MVC_Blog.Migrations
 
                 // If the database is empty, populate sample data in it
 
-                CreateUser(context, "admin@gmail.com", "123", "System Administrator");
+                CreateUser(context, "test@test.com", "123", "System Administrator");
 
                 CreateUser(context, "pesho@gmail.com", "123", "Peter Ivanov");
 
@@ -46,9 +47,9 @@ namespace MVC_Blog.Migrations
 
                 CreateUser(context, "geshu@gmail.com", "123", "George Petrov");
 
-                CreateRole(context, "Administrators");
+                CreateRole(context, "Administrator");
 
-                AddUserToRole(context, "admin@gmail.com", "Administrators");
+                AddUserToRole(context, "admin@gmail.com", "Administrator");
 
                 CreatePost(context, title: "Work Begins on HTML5.1", body: @"<p>The World Wide Web Consortium (W3C) has begun work on <b>HTML5.1</b>,
 
@@ -371,6 +372,7 @@ namespace MVC_Blog.Migrations
             context.Posts.Add(post);
 
         }
+    */
 
     }
 
