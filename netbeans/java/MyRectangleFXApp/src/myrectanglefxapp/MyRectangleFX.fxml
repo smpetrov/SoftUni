@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import java.net.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+
+<StackPane id="StackPane" 
+           fx:id="stackpane" 
+           prefHeight="200" prefWidth="400" 
+           xmlns:fx="http://javafx.com/fxml/1" 
+           fx:controller="myrectanglefxapp.MyRectangleFXController">
+    <stylesheets>
+        <URL value="@MyCSS.css" />
+    </stylesheets>
+    <children>
+        <Rectangle fx:id="myrectangle"
+                   width="200" height="100"
+                   arcWidth="30" arcHeight="30"
+                   onMouseClicked="#handleMouseClick"
+        />
+        <Text text="My Rectangle">
+            <effect>
+                <Reflection />
+            </effect>
+            <font>
+                <Font name="Verdana Bold" size="18.0" />
+            </font>
+        </Text>
+    </children>
+</StackPane>
