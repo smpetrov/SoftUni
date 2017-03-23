@@ -1,6 +1,7 @@
 
 package changetest;
 
+import java.util.function.IntBinaryOperator;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.value.ObservableValue;
@@ -40,6 +41,7 @@ public class ChangeTest {
         counter.set(103);;
         System.out.println("Set the value-103. Fire an change event because the value was change and status become -has change-");
         System.out.println("After changing the counter value to 103");
+        
     }
     
     public static void changed(
@@ -49,5 +51,5 @@ public class ChangeTest {
         System.out.print("Counter changed:");
         System.out.println("Old = " + oldValue + " New = " + newValue);
     }
-    
+
 }
