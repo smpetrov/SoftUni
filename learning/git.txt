@@ -83,6 +83,7 @@ https://msysgit.github.io  - dwoanload git client
 	- git reset --hard <ългия номер от log>   -- премахва следващите след този commt данни
 		или
 	  git reset --soft <ългия номер от log>   -- запазва следващите след този commt данни
+	  
 22. git pull with replace local files /without merge/
 	- git fetch --all
 	- git reset --hard origin/master
