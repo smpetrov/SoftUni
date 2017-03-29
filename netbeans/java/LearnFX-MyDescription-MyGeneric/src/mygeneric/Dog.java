@@ -7,4 +7,8 @@ public class Dog extends MyAnimal implements Animal{
         System.out.println("Dog eating " + str);
     }
     
+    public void move(){
+        //code
+    }
+    
 }
