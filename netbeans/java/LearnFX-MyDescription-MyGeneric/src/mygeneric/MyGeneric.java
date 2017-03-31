@@ -12,7 +12,6 @@ import java.util.List;
 //Пр. ArrayList<Integer>
 //generic в java не подържат типа на данните runtime - това е type erasure
 // т.е. при стартиране на програмата типа на generic типовете изчезва
-//затова при извеждане трябва да се каства типа
 
 public class MyGeneric {
 
@@ -33,7 +32,12 @@ public class MyGeneric {
         //от Java 7
         //при инстанциране може да изпуснем типа при вторите <> скоби
         MyGenericClass<String> myGenericClassNew = new MyGenericClass<>();
-
+        //MyGenericClass<String> myGenericClassNew2 = myGenericClassNew.myGenericMethodReturn(new Object());
+        System.out.println(myGenericClassNew instanceof MyGenericClass);
+        
+        List<String> ar= myGenericClass.myGenericMethodList();
+        System.out.println(ar instanceof Object);        
+        
         //declaration array with generic - ползва се reflection /Integer.class/
         MyGenericClass<Integer> arrayListIntegers = new MyGenericClass<>(Integer.class,
                                                             MyGenericClass.DEFAULT_CAPACITY);
@@ -172,7 +176,7 @@ public class MyGeneric {
     }
 
     //public static <T extends MyAnimal> void printAnimalsExtends(List<T> animals){
-    //еднакво с долното
+    //еднакво с долното ???????
     public static void printAnimalsExtends(List<? extends MyAnimal> animals){    
         //т.к. ние не знаем типа на List runtime
         //защото при стартиране на програмата generic типовете в java изчезват

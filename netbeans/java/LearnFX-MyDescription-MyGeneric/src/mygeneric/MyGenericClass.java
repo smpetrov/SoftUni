@@ -6,7 +6,8 @@ import java.util.List;
 public class MyGenericClass<T> implements MyGenericInterface<T>{
     public static final int DEFAULT_CAPACITY = 10;
     Class<T> classParm;
-
+    
+    T genericParameter;    
     //declaration generic array in Java - version 1
     private  T[] genericArray1;
 
@@ -39,8 +40,13 @@ public class MyGenericClass<T> implements MyGenericInterface<T>{
     }
 
 
-    //generic method, който не връша данни
+    //generic method, който не връша данни 
     public <T> void myGenericMethod(){
+    }
+    
+    //generic method, който не връша T
+    public <T extends MyClass> T myGenericMethodReturn(T parm){
+        return parm;
     }
 
     //generic method, който връша String
@@ -68,9 +74,10 @@ public class MyGenericClass<T> implements MyGenericInterface<T>{
     //В Java параметри не могат да бъдат примитивни типове /int.double i т.н./
     // вместо тях зе ползмат Integer, Double и т.н.
     public void demoTypeErasure(Object obj){
-        //тези изрази ще дадат грешка т.к. икхшспе не се знае типа на T
+        //тези изрази ще дадат грешка т.к. runtime на generic типа не се знае типа на T
         //if (obj instanceof T){}
         //T[] array = new T[10];
         //T newInstance = new T();
     }
+ 
 }
