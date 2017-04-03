@@ -183,8 +183,7 @@ public class MyGeneric {
         //т.е. като параметър на метода е зададен с <T extends MyAnimal>
         //тогава от дума extends следва ,чето List може да е MyAnimal или Cat 
         //или Dog или Kitten - всички наследници на MyAnimal
-        //т.е. от List-та може само да четем след което да проверим /instanceof/
-        //дали типа и този, които очакваме
+        //т.е. от List-та може само да четем 
         //animals.add((Object) new MyAnimal());  //не работи compilation error
         //animals.add(new Cat());  //не работи compilation error
         //animals.add(new Dog()); //не работи compilation error
