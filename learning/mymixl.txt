@@ -1,0 +1,41 @@
+Автомтизация на конфигурирането
+Софтуер препоъчан от Мариян Мариянов - автомтизация на конфигурирането
+http://www.lcfg.org - LCFG: A large scale UNIX configuration system
+http://bcfg2.org/ - BCFG:A Configuration Management Tool for Heterogeneous Environments
+https://cfengine.com/ - Automate large-scale, complex and mission critical IT infrastructure
+Csync2 - filesystem syncronization tool for Linux
+
+Софтуер /друг/- автомтизация на конфигурирането
+https://www.ansible.com/
+https://www.chef.io/chef/
+https://puppet.com/product/how-puppet-works
+
+Софтуер - автомтизация на конфигурирането
+http://www.softpanorama.org/Admin/unix_conf_management.shtml - Unix Configuration Management Tools
+https://blog.profitbricks.com/48-best-cloud-tools-for-infrastructure-automation/
+
+
+Frameworks for backend
+spring - java
+rails - ruby
+django - python
+zend - php
+
+Поколения програмни езици
+1.Машинен код
+2.Асемблер
+  2.5 C / C++ / D /Rust /Go
+3.Java / C$ / JS
+4.SQL
+5.Prolog
+
+
+http://joelonsoftware.com - блог за програмиране !
+http://norvig.com/21-days.html - блог за програмиране !
+
+Лицензи - които не спират фирмите да ползват вашия софтуер
+FreeBSD
+Apache
+
+ERP
+https://bgerp.com

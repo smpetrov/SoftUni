@@ -7,6 +7,7 @@ package mygeneric;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 //Пр. ArrayList<Integer>
@@ -108,7 +109,7 @@ public class MyGeneric {
         //долното не е възможно т.к. при List runtime не се знае типа
         //animals=cats;
 
-        //при масиви има коинвариантност
+        //при масиви има ковариантност
         MyAnimal[] arAnimals = new MyAnimal[10];
         Dog[] arDogs = new Dog[10];
         Cat[] arCats = new Cat[10];
@@ -165,6 +166,31 @@ public class MyGeneric {
         //    "Consumer Super" - If you need a List to consume T values (you want to write Ts into the list), you need to declare it with ? super T, e.g. List<? super Integer>. But there are no guarantees what type of object you may read from this list.
         // If you need to both read from and write to a list, you need to declare
         //it exactly with no wildcards, e.g. List<Integer>.
+        
+        
+        //COVARIANT / INVARIANT
+        //In Java, array subtyping is covariant, meaning that type S[] is considered 
+        //to be a subtype of T[] whenever S is a subtype of T.
+        Integer[] ints = new Integer[] {1,2,3};
+        Number[] nums = ints;
+        nums[2] = 3.14; // array store exception
+        assert Arrays.toString(ints).equals("[1, 2, 3.14]"); // uh oh!
+        //Since Integer[] is considered a subtype of Number[], according 
+        //to the Substitution Principle the assignment on the second line must be legal. Instead,
+        //the problem is caught on the third line, and it is caught at run time. When an array is
+        //allocated (as on the first line), it is tagged with its reified type (a run-time representation
+        //of its component type, in this case, Integer), and every time an array is assigned into
+        //(as on the third line), an array store exception is raised if the reified type is not compatible
+        //with the assigned value (in this case, a double cannot be stored into an array of Integer).
+        
+        //In contrast, the subtyping relation for generics is invariant, meaning that type List<S> is
+        //not considered to be a subtype of List<T>, except in the trivial case where S and T are identical.
+        //List<Integer> ints1 = Arrays.asList(1,2,3);
+        //List<Number> nums1 = ints1; // compile-time error
+        //nums1.set(2, 3.14);
+        //assert ints.toString().equals("[1, 2, 3.14]"); // uh oh!
+        //Since List<Integer> is not considered to be a subtype of List<Number>, the problem is
+        //detected on the second line, not the third, and it is detected at compile time, not run time.
 
     }
 

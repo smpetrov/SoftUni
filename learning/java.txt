@@ -1,0 +1,20 @@
+1. It is clearer and cleaner to use equals rather than == to compare
+values of reference type, such as Integer or String.
+2.It may seem reasonable to expect that since Integer is a subtype of Number, it follows
+that List<Integer> is a subtype of List<Number>. But this is not the case
+3.The Get and Put Principle: use an extends wildcard when you only get values out of a
+structure, use a super wildcard when you only put values into a structure, and don’t use
+a wildcard when you both get and put.
+4.Collections are far more flexible than arrays. 
+    - При колекциите грешке.ите се откриват по време на конпилация при масивите runtime.
+	- колекциите позволяват: добавяне, премахване, сравняване и комбиниране на две колекции
+	- колекциите позволяват изваждането на подколекция
+	- колекциите могат да са arrays, linked list, trees. hash tables
+	- колекциите могат да се въртят, разбъркват, да намират max елемент, да правят колекцията unmodifiable или synchronized
+	- масивите са по ефективни
+In some sense, covariant arrays are an artifact of the lack of generics in earlier versions
+of Java. Once you have generics, covariant arrays are probably the wrong design choice,
+and the only reason for retaining them is backward compatibility.
+For many purposes, it may be sensible to consider arrays a deprecated
+type	
+5.<?> == <? extends Object>
